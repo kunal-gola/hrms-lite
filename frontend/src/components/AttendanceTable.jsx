@@ -31,7 +31,7 @@ export function AttendanceTable({ attendances }) {
       <TableBody>
         {attendances.length === 0 ?
             <TableRow>
-                <TableCell colspan="4">
+                <TableCell colSpan="4">
                 <div className="p-4 text-xl">
                     No Records Found.
                 </div>
@@ -40,7 +40,7 @@ export function AttendanceTable({ attendances }) {
         :
         attendances.map( record => {
             return (
-                <TableRow key={record['employee_id']}>
+                <TableRow key={`${record['employee_id']}-${record['date']}`}>
                     <TableCell className="text-left font-medium">{record['date']}</TableCell>
                     <TableCell className="text-left">{record['employee_id']}</TableCell>
                     <TableCell className="text-left">{record['full_name']}</TableCell>

@@ -33,7 +33,7 @@ export function EmployeeTable({ employees, onDelete, deletingEmployeeID, setCurr
 
         {employees.length === 0 ? 
             <TableRow>
-                <TableCell colspan="5">
+                <TableCell colSpan="5">
                 <div className="p-4 text-xl">
                     No Records Found.
                 </div>
