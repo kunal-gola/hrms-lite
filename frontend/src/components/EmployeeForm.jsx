@@ -82,7 +82,7 @@ export function EmployeeForm({ onFormSubmit, loading, errorMessage }) {
             email: form.email.trim(),
             department: form.department.trim(),
         });
-        // setForm(INITIAL_FORM);
+        setForm(INITIAL_FORM);
         } catch {
         // Keep entered values when submission fails.
         }
